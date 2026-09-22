@@ -1,0 +1,305 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(235, 229, 190);
+    /*cor de fundo*/
+    margin: 5%;
+    /*Margin = espaço externo ao redor do elemento.*/
+    font-family: Arial, Helvetica, sans-serif;
+    /*fonte*/
+}
+
+header {
+    display: flex;
+    /*transforma o elemento em um container Flexbox, permitindo organizar os elementos que estão dentro dele.*/
+    justify-content: space-between;
+    /*Serve para dar o espaçamento HORIZONTAL, disponível entre os elementos, mantendo o primeiro no começo e o último no final.*/
+    align-items: center;
+    /*serve para alinhar os elementos verticalmente pelo centro.*/
+    padding: 10px;
+    /*Padding = espaço dentro do elemento.*/
+    background-color: rgb(255, 255, 254);
+    /*cor de fundo*/
+    position: relative;
+    /* vira o "ponto de referência" pro menu flutuante */
+}
+
+.menu {
+    /*"." o ponto final serve para indicar uma classe criada para o botão especifica*/
+    background-color: rgb(191, 130, 60);
+    /*cor de fundo*/
+    color: rgb(239, 241, 240);
+    /*cor do texto*/
+    border: none;
+    /*serve para colocar ou retirar a borda do botão*/
+    border-radius: 6px;
+    /*serve para arredondar a borda do botão*/
+    padding: 10px;
+    /*aumenta o espaço interno e, consequentemente, o tamanho do botão*/
+    font-size: 14px;
+    /*serve para o tamanho da fonte*/
+    cursor: pointer;
+    /*formato do cursor quando o mouse passa sobre o elemento*/
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    /*criar sombra nos elementos (1º valor → esquerda/direita, 2º valor → cima/baixo, 3º valor → desfoque*/
+    transition: 0.3s;
+    /*serve para suavizar a mudança quando passar o mouse*/
+    margin: 5px;
+}
+
+.menu:hover {
+    /*HOVER = interação - quando o mouse está sobre o elemento, ele muda, e o ":" é uma pseudo-classe*/
+    background-color: rgb(104, 58, 3);
+}
+
+
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /*fonte*/
+    font-size: 50px;
+    /*tamanho fonte*/
+    margin: 5px;
+    /*espaço externo ao redor do elemento.*/
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+.carrinho {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 14px;
+    padding: 6px;
+    /*criar bordas internas*/
+    border-radius: 6px;
+    background-color: rgb(191, 130, 60);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carrinho:hover {
+    background-color: rgb(104, 58, 3);
+}
+
+nav {
+    display: none;
+    position: absolute;
+    /* tira do fluxo normal, não empurra o resto da página */
+    top: 100%;
+    /* cola logo abaixo do header */
+    left: 10px;
+    /* alinhado perto do botão de menu */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 10;
+    /* garante que fique por cima do resto do conteúdo */
+}
+
+nav.ativo {
+    display: block;
+    /* quando o JS adiciona essa classe, o menu aparece */
+}
+
+.linha-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.seta-submenu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+.seta-submenu.ativo {
+    transform: rotate(180deg);
+}
+
+.submenu {
+    display: none;
+}
+
+.submenu.ativo {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    margin-top: 8px;
+    gap: 8px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    /*espaço entre os elementos*/
+    list-style: none;
+    /*remove as bolinhas da lista*/
+    margin-top: 20px;
+    /*cria espaço fora do <ul>, somente em cima.*/
+    padding-left: 50px;
+    /*cria espaço dentro do <ul>, somente no lado esquerdo*/
+    flex-wrap: wrap;
+    /*permite quebrar para outra linha quando faltar espaço.*/
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+li a {
+    /*Selecione todo <a> que estiver dentro de um <li>*/
+    display: flex;
+    justify-content: center;
+    /*centraliza no eixo principal horizontalmente*/
+    align-items: center;
+    /*centraliza os elementos no eixo transversal/vertical*/
+    gap: 7px;
+}
+
+a img {
+    width: 45px;
+    /*controla a largura da imagem*/
+    height: 45px;
+    /*controla a altura da imagem*/
+    object-fit: contain;
+    /*mantém a proporção e mostra a imagem inteira*/
+}
+
+a span {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+main {
+    display: flex;
+    /*deixa na vertical*/
+    flex-direction: column;
+    width: 90%;
+    max-width: 920px;
+    margin: 0 auto;
+    align-items: center;
+
+}
+
+main h2 {
+    margin-bottom: 20px;
+    /* espaço externo do título */
+    text-align: center;
+}
+
+main p {
+    margin-bottom: 20px;
+    /* espaço externo do parágrafo */
+}
+
+
+section {
+    display: flex;
+    gap: 20px;
+    max-width: 920px;
+    width: 100%;
+}
+
+section div {
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+section div p {
+    line-height: 1.5;
+}
+
+button {
+    background-color: rgb(191, 130, 60);
+    /*cor de fundo*/
+    color: rgb(239, 241, 240);
+    /*cor do texto*/
+    border: none;
+    /*serve para colocar ou retirar a borda do botão*/
+    border-radius: 6px;
+    /*serve para arredondar a borda do botão*/
+    padding: 10px;
+    /*aumenta o espaço interno e, consequentemente, o tamanho do botão*/
+    font-size: 30px;
+    /*serve para o tamanho do botão*/
+    cursor: pointer;
+    /*formato do cursor quando o mouse passa sobre o elemento*/
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.ver-sacolas:hover {
+    /*HOVER = interação - quando o mouse está sobre o elemento, ele muda, e o ":" é uma pseudo-classe*/
+    background-color: rgb(104, 58, 3);
+    transform: scale(1.1);
+    /*aumenta o botão*/
+}
+
+@media (max-width: 600px) {
+    /*Quando a tela tiver 600px ou menos, o mesmo elemento pode ter tamanhos diferentes dependendo do tamanho da tela.*/
+
+    h1 {
+        font-size: 40px;
+    }
+
+    ul {
+        flex-wrap: wrap;
+    }
+
+    ul li {
+        flex-basis: 60px;
+        /*definir um tamanho inicial para cada item flexível antes de o navegador distribuir o espaço.*/
+    }
+
+    a img {
+        width: 30px;
+        height: 30px;
+    }
+
+    section div {
+        width: 100%;
+        flex-grow: 1;
+        /*pode crescer quando sobra espaço*/
+    }
+
+    section {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+}
+
+    footer {
+		padding: 40px;
+		background-color: #fff;
+	}
+
+	.footInfo {
+		border: none;
+		background-color: rgb(191, 130, 60);
+		border-radius: 10px;
+		padding: 6px;
+		text-align: center;
+        color: white;
+        text-decoration: none;
+	}

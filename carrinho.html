@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtros - Vitrine Digital</title>
+    <link rel="stylesheet" href="css/home.css">
+
+<style> /*FAVOR COLOCAR ISSO AQUI NO ARQUIVO CSS PRINCIPAL DEPOIS*/ 
+    
+    .lista-carrinho {
+        display: flex;
+        flex-direction: row;
+    }
+
+    li.item-carrinho {
+		display: inline-block; /*MUDA O TIPO DE "GRADE"*/
+        grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); /*NÃO TENHO CTZ NA VDD KKKKK MAS EU VI O BILLY FZND*/ 
+        gap: 10px; /*O MESMO AQUI*/ 
+		font-size: 20px;
+		padding: 10px;
+		list-style: none; /*TIRA AQUELES PONTOS FEIO PRA KCT*/
+		margin: 10px;
+		margin-right: 1.2rem; 
+		border: solid 2px;
+		border-radius: 10px;
+            border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;
+            /*
+            ESSES DOIS BORDER-RADIUS RIGHT E LEFT TIRAM A PARTE ARREDONDADA DA PARTE INFERIOR DA BORDA
+            O MEU OBJETIVO ERA FAZER ALGO PARECIDO COM O FORMATO DE UMA FOTO POLAROID
+            SE ISSO É DOIDEIRA MINHA, EU QUERO QUE SE FODA. NA VDD NÃO. NÃO SEI. SÃO 1 DA MANHÃ EU TO CANSADO CARALHO
+            BOA NOITE.
+            — SAMUEL REI DELAS
+
+            EDIT: EU DEVO TER TIRADO DO MEU CU QUE POLAROID TEM AS BORDAS ARREDONDADAS NA PARTE DE CIMA, PUTA QUE PARIU.
+            MAS VAI FICAR, SE TIRAR EU TE AMALDIÇOO COM 30 ANOS DE AZAR.
+            — SAMUEL REI DELAS
+            */
+		text-align: center;
+		background: #fff; /*ESSA COR É SÓ EXEMPLO OK?*/
+	}
+
+    .item-carrinho:hover {
+        background-color: rgba(96, 176, 74, 0.354);
+    }
+
+    .img-carrinho {
+        border-bottom: solid 3px;
+        width: 100%;
+    }
+
+    footer {
+		padding: 40px;
+		background-color: #fff;
+	}
+
+	.footInfo {
+		border: none;
+		background-color: rgb(191, 130, 60);
+		border-radius: 10px;
+		padding: 6px;
+		text-align: center;
+        color: white;
+        text-decoration: none;
+	}
+</style>
+    
+</head>
+<body>
+    <header>
+        <button class="menu">☰ Menu</button>
+        <h1>Túa Bag</h1>
+        <a href="carrinho.html" class="carrinho">🛒 Carrinho</a>
+    </header>
+
+    <nav>
+        <ul class="navegacao">
+            <li>
+                <a href="home.html"><img src="imagens/Captura de tela 2026-08-31 154244.png" alt="Icone Home"
+                        width="40px">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="sacolas.html"><img src="imagens/Captura de tela 2026-08-31 135421.png" alt="Icone Sacolas"
+                        width="25px">
+                    <span>Sacolas</span>
+                </a>
+            </li>
+            <li>
+                <a href="modelos.html"><img src="imagens/Captura de tela 2026-08-31 140130.png" alt="Icone Modelos"
+                        width="25px">
+                    <span>Modelos</span>
+                </a>
+            </li>
+            <li>
+                <a href="cores.html"><img src="imagens/Captura de tela 2026-08-31 153102.png" alt="Icone Cores"
+                        width="25px">
+                    <span>Cores</span>
+                </a>
+            </li>
+            <li>
+                <a href="tamanhos.html"><img src="imagens/Captura de tela 2026-08-31 153538.png" alt="Icone Tamanho"
+                        width="25px">
+                    <span>Tamanhos</span>
+                </a>
+            </li>
+            <li>
+                <a href="personalizado.html"><img src="imagens/Captura de tela 2026-08-31 154023.png"
+                        alt="Icone Personalizado" width="25px">
+                    <span>Personalizado</span>
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+
+<main>
+
+    <h1>SEU CARRINHO</h1>
+
+
+
+<section>
+    <ol class="lista-carrinho">
+        <li class="item-carrinho">
+        <img class="img-carrinho" src="imagens/sacolas-de-compras.png" 
+        alt="item">
+        <p>
+            Exemplo 1
+        </p>
+
+        </li>
+
+        <li class="item-carrinho">
+        <img class="img-carrinho" src="imagens/sacolas-de-compras.png" 
+        alt="item">
+        <p>
+            Exemplo 2
+        </p>
+        </li>
+        
+        <li class="item-carrinho">
+        <img class="img-carrinho" src="imagens/sacolas-de-compras.png" 
+        alt="item">
+        <p>
+            Exemplo 3
+        </p>
+        </li>
+
+        <li class="item-carrinho">
+        <img class="img-carrinho" src="imagens/sacolas-de-compras.png" 
+        alt="item">
+        <p>
+            Exemplo 4
+        </p>
+        </li>
+
+    </ol>
+</section>
+
+</main>
+
+<footer>
+
+    <p>
+        <a class="footInfo" href="#">Entre em Contato</a>
+    </p>
+    <p>
+        <a class="footInfo" href="sobre.html">Sobre Nós</a>
+    </p>
+    <p class="footInfo">Projeto Túa Bag🛍️ | Em construção🚧</p>
+    
+</footer>
+</html>

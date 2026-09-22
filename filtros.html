@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtros - Vitrine Digital</title>
+    <link rel="stylesheet" href="css/home.css">
+
+
+<style>
+
+.item-carrinho:hover {
+        background-color: rgba(96, 176, 74, 0.354);
+    }
+
+.img-carrinho {
+        border-bottom: solid 3px;
+        width: 100%;
+    }
+
+</style>
+</head>
+<body>
+    <header>
+        <button class="menu">☰ Menu</button>
+        <h1>Túa Bag</h1>
+        <a href="carrinho.html" class="carrinho">🛒 Carrinho</a>
+    </header>
+
+
+    <nav>
+        <ul class="navegacao">
+            <li>
+                <a href="index.html"><img src="imagens/Captura de tela 2026-08-31 154244.png" alt="Icone Home"
+                        width="40px">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="sacolas.html"><img src="imagens/Captura de tela 2026-08-31 135421.png" alt="Icone Sacolas"
+                        width="25px">
+                    <span>Sacolas</span>
+                </a>
+            </li>
+            <li>
+                <a href="modelos.html"><img src="imagens/Captura de tela 2026-08-31 140130.png" alt="Icone Modelos"
+                        width="25px">
+                    <span>Modelos</span>
+                </a>
+            </li>
+            <li>
+                <a href="cores.html"><img src="imagens/Captura de tela 2026-08-31 153102.png" alt="Icone Cores"
+                        width="25px">
+                    <span>Cores</span>
+                </a>
+            </li>
+            <li>
+                <a href="tamanhos.html"><img src="imagens/Captura de tela 2026-08-31 153538.png" alt="Icone Tamanho"
+                        width="25px">
+                    <span>Tamanhos</span>
+                </a>
+            </li>
+            <li>
+                <a href="personalizado.html"><img src="imagens/Captura de tela 2026-08-31 154023.png"
+                        alt="Icone Personalizado" width="25px">
+                    <span>Personalizado</span>
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+    <main>
+        <h2>SACOLAS PERSONALIZADAS DO SEU JEITO!</h2>
+
+        <p>Qualidade, estilo e identidade para sua marca.</p>
+        
+        <hr>
+
+        <form>
+            <fieldset>
+                <legend>
+                    Filtro-de-Sacolas
+                </legend>
+
+                <br>
+
+                <label for="preco">Preço Máximo: </label>
+                <input type="number" name="preco" id="preco">
+                                
+                <br>
+                
+                <label>
+                    <input type="radio" name="disponivel" id="statusSacola">
+                    Apenas Disponíveis
+                </label>
+        
+                <br>
+        
+                <label>
+                    <input type="radio" name="indisponivel" id="statusSacola">
+                    Apenas indisponíveis
+                </label>
+
+                <br>
+
+                <label>
+                    <input type="checkbox" name="grande" id="tamanhoSacola">
+                    Sacola Grande
+                </label>
+
+                <br>
+
+                <label>
+                    <input type="checkbox" name="media" id="tamanhoSacola">
+                    Sacola Média
+                </label>
+
+                <br>
+
+                <label>
+                    <input type="checkbox" name="pequena" id="tamanhoSacola">
+                    Sacola Pequena
+                </label>
+
+                <br>
+                
+
+                
+                <br><br>
+
+                <button class="botao-aplicar" type="submit">Aplicar filtros</button>
+                <button class="botao-resetar" type="reset">Limpar filtros</button>
+            </fieldset>
+
+            <fieldset>
+                <legend>Resultados</legend>
+
+        <ol class="lista-carrinho">
+            
+            <li class="item-carrinho">
+                
+                <img class="img-carrinho" src="imagens/sacolas-de-compras.png" 
+                alt="item">
+                <p>
+                    Exemplo 1
+                </p>
+
+            </li>
+
+            <li class="item-carrinho">
+        
+                <img class="img-carrinho" src="imagens/sacolas-de-compras.png" 
+                alt="item">
+                
+                <p> 
+                    Exemplo 2
+                </p>
+        
+            </li>
+        
+            <li class="item-carrinho">
+                <img class="img-carrinho" src="imagens/sacolas-de-compras.png" 
+                alt="item">
+            <p>
+                Exemplo 3
+            </p>
+        
+            </li>
+
+        
+            <li class="item-carrinho">
+        
+                <img class="img-carrinho" src="imagens/sacolas-de-compras.png" 
+                alt="item">
+        
+            <p>
+                Exemplo 4
+            </p>
+        
+            </li>
+
+        </ol>
+
+                <!--FAVOR PESQUISAR COMO FAZER UMA LISTA
+                    NA HORIZONTAL OU EM GRADE PARA A 
+                    IMPLEMENTAÇÃO MAIS TARDE. SEJA LÁ QUEM 
+                    ESTIVER LENDO ESSE COMENTÁRIO. VALEU AÍ.
+                    OBS:
+                    OBVIAMENTE NÃO É PRA AGORA, MAS SIM PRA
+                    QUANDO TIVERMOS MAIS CONTEÚDO. POR ENQUANTO
+                    TÁ OK-->
+
+            </fieldset>
+        
+        </form>
+
+    </main>
+
+</body>
+
+<footer>
+
+    <p class="footer">
+        <a class="linkFoot" href="#">Entre em Contato</a>
+    </p>
+    <p class="footer">
+        <a class="linkFoot" href="sobre.html">Sobre Nós</a>
+    </p>
+    
+    <p class="footer">
+        <span class="textFoot">Projeto Túa Bag🛍️ | Em construção🚧</span>
+    </p>
+    
+</footer>
+</html>

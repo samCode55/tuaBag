@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados - Túa Bag</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <button class="menu">☰</button>
+
+    <a href="home.html">
+        <h1>TÚA BAG</h1>
+    </a>
+
+    <a href="carrinho.html" class="carrinho">🛒</a>
+
+    <nav>
+        <ul>
+            <li>
+                <div class="linha-menu">
+                    <a href="sacolas.html">Sacolas</a>
+                    <button class="seta-submenu">▼</button>
+                </div>
+
+                <ul class="submenu">
+                    <li><a href="sacolas.html">Modelos</a></li>
+                    <li><a href="sacolas.html">Materiais</a></li>
+                    <li><a href="sacolas.html">Cores</a></li>
+                    <li><a href="sacolas.html">Tamanhos</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="personalizar.html">Personalizar</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section>
+        <h2>RESULTADOS</h2>
+        <button class="editar-filtros">EDITAR FILTROS</button>
+    </section>
+
+    <section class="filtros-aplicados">
+    </section>
+
+    <p class="quantidade">
+    </p>
+
+    <section class="produtos">
+    </section>
+
+    <p class="nenhum-produto">
+    </p>
+
+</main>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const nav = document.querySelector("nav");
+
+    menu.addEventListener("click", function() {
+        nav.classList.toggle("ativo");
+    });
+
+    const seta = document.querySelector(".seta-submenu");
+    const submenu = document.querySelector(".submenu");
+
+    seta.addEventListener("click", function() {
+        submenu.classList.toggle("ativo");
+        seta.classList.toggle("ativo");
+    });
+
+    const editarFiltros = document.querySelector(".editar-filtros");
+
+    editarFiltros.addEventListener("click", function() {
+        window.location.href = "filtros.html";
+    });
+</script>
+
+</body>
+</html>

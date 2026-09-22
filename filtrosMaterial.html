@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Túa Bag — Filtro de materiais</title>
+
+    <link rel="stylesheet" href="css/home.css">
+
+<style>
+
+.material-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+
+  padding-left: 40%;
+  padding-right: 40%;
+
+  border: 2px solid;
+  background-color: #f7f7f7;
+}
+
+.material-item {
+  align-self: baseline;
+  text-align: center;
+
+  padding: 2px;
+}
+
+.material-item:hover {
+  background-color: #939090;
+}
+
+</style>
+    
+  
+  </head>
+  <body>
+
+  <header>
+    <button class="menu">☰ Menu</button>
+    <a href="home.html">
+        <h1>Túa Bag</h1>
+    </a>
+    <a href="carrinho.html" class="carrinho">🛒 Carrinho</a>
+
+    <nav>
+        <ul>
+            <li class="tem-submenu">
+                <div class="linha-menu">
+                    <a href="sacolas.html">
+                        <img src="imagens/Captura de tela 2026-08-31 135421.png" alt="Icone Sacolas" width="25px">
+                        <span>Sacolas</span>
+                    </a>
+                    <button class="seta-submenu" aria-expanded="false">▾</button>
+                </div>
+
+                <ul class="submenu">
+
+                  <!--
+                  BAGULHO FEIO DA PORRA. NÃO TO NEM ENTENDENDO OQ PORRA É ESSA.
+                  QUEM QUER QUE TENHA FEITO ISSO VAI LEVAR PORRADA.
+                  CLARAMENTE IA
+                  — SAMUEL REI DELAS
+                  -->
+                    <li><a href="sacolas.html#cores">Cores</a></li>
+                    <li><a href="sacolas.html#tamanhos">Tamanhos</a></li>
+                    <li><a href="sacolas.html#materiais">Materiais</a></li>
+                    <li><a href="sacolas.html#modelos">Modelos</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="personalizar.html">
+                    <img src="imagens/Captura de tela 2026-08-31 154023.png" alt="Icone Personalizado" width="25px">
+                    <span>Personalizar</span>
+                </a>
+            </li>
+        </ul>
+
+        <hr>
+    </nav>
+</header>
+
+<script src="js/script.js"></script>
+
+<main>
+        <h2>MATERIAL</h2>
+
+        <div class="material-list">
+          
+          <p class="material-item">
+
+          <label class="material-row">
+            <input type="checkbox" />
+            <span class="material-nome">Papel Kraft</span>
+          </label>
+          
+          </p>
+          
+          <p class="material-item">
+
+          <label class="material-row">
+            <input type="checkbox" />
+            <span class="material-nome">Kraft Branco</span>
+          </label>
+          
+        </p>
+
+          <p class="material-item">
+
+          <label class="material-row">
+            <input type="checkbox" />
+            <span class="material-nome">Couchê</span>
+          </label>
+          
+          </p>
+
+          <p class="material-item">
+
+          <label class="material-row">
+            <input type="checkbox" />
+            <span class="material-nome">Reciclado</span>
+          </label>
+          
+          </p>
+
+          <p class="material-item">
+          
+            <label class="material-row">
+            <input type="checkbox" />
+            <span class="material-nome">Plástico</span>
+          </label>
+          
+          </p>
+
+        </div>
+      
+</main>
+
+<footer class="footer"> <!--PRECISA SEPARAR ISSO AQ DA DIV MATERIAL-LIST, NÃO DESCOBRI COMO-->
+
+    <p>
+      <a class="footInfo" href="#">Entre em Contato</a>
+    </p>
+    <p>
+      <a class="footInfo" href="sobre.html">Sobre Nós</a>
+    </p>
+    <p class="footInfo">Projeto Túa Bag🛍️ | Em construção🚧</p>
+  
+</footer>
+
+</body>
+</html>
