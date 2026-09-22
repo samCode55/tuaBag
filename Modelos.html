@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Túa Bag — Selecione o modelo</title>
+
+  <style>
+    :root {
+      --bg: #f4efe6;
+      --surface: #ffffff;
+      --ink: #29241f;
+      --ink-soft: #6e655a;
+      --line: #ddd3c4;
+      --accent: #7a2e2e;
+      --accent-bg: #f7e9e9;
+      --radius-sm: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      display: flex;
+      justify-content: center;
+      padding: 24px 12px 40px;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo {
+      font-family: "Fraunces", serif;
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: 0.5px;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+
+    h1.section-title {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-align: center;
+      margin: 0 0 24px;
+      color: var(--ink-soft);
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      margin-bottom: 18px;
+    }
+
+    .card img {
+      width: 100%;
+      max-width: 180px;
+      display: block;
+      margin: 0 auto 14px;
+      border-radius: var(--radius-sm);
+    }
+
+    .option-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 2px;
+      border-bottom: 1px solid var(--line);
+      cursor: pointer;
+    }
+    .option-row:last-child {
+      border-bottom: none;
+    }
+    .option-row:hover {
+      background: rgba(0, 0, 0, 0.02);
+    }
+
+    .option-row input[type="radio"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 1.5px solid var(--ink-soft);
+      border-radius: 50%;
+      margin: 0;
+      flex-shrink: 0;
+      cursor: pointer;
+      position: relative;
+      background: var(--surface);
+    }
+    .option-row input[type="radio"]:checked {
+      border-color: var(--accent);
+    }
+    .option-row input[type="radio"]:checked::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .option-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .option-name {
+      font-size: 14.5px;
+      font-weight: 500;
+    }
+
+    .option-desc {
+      font-size: 12.5px;
+      color: var(--ink-soft);
+    }
+
+    .apply-btn {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: var(--radius-sm);
+      background: var(--ink);
+      color: #fff;
+      font-family: inherit;
+      font-size: 14.5px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+    .apply-btn:hover {
+      background: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <span class="logo">TÚA BAG</span>
+    <h1 class="section-title">SELECIONE O MODELO</h1>
+
+    <form action="#" method="get">
+
+      <div class="card">
+        <img src="imagens/sacolaexemplo.png" alt="Modelo Básico">
+        <label class="option-row">
+          <input type="radio" name="modelo" value="basico" checked>
+          <div class="option-info">
+            <span class="option-name">Modelo Básico</span>
+            <span class="option-desc">Sacola lisa, sem estampa</span>
+          </div>
+        </label>
+      </div>
+
+      <div class="card">
+        <img src="imagens/sacolaexemplo2.png" alt="Modelo Clássico">
+        <label class="option-row">
+          <input type="radio" name="modelo" value="classico">
+          <div class="option-info">
+            <span class="option-name">Modelo Clássico</span>
+            <span class="option-desc">Acabamento reforçado, sem estampa</span>
+          </div>
+        </label>
+      </div>
+
+      <div class="card">
+        <img src="imagens/sacolaexemplo3.png" alt="Modelo Estampado">
+        <label class="option-row">
+          <input type="radio" name="modelo" value="premium">
+          <div class="option-info">
+            <span class="option-name">Modelo Estampado</span>
+            <span class="option-desc">Com estampa personalizada</span>
+          </div>
+        </label>
+      </div>
+
+      <button type="submit" class="apply-btn">ENVIAR PEDIDO</button>
+
+    </form>
+  </div>
+</body>
+</html>
